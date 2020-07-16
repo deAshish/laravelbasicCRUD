@@ -19,6 +19,11 @@
             <input type="hidden" name="id" id="id" value="{{$posts->id}}">
 
             <div class="form-group">
+                <label>User_ID</label>
+                <input type="number" name="user_id" class="form-control" placeholder="Enter your ID number">
+            </div>
+
+            <div class="form-group">
                 <label>Title</label>
                 <input type="text" name="title" class="form-control" value="{{$posts->title}}" placeholder="Enter your title">
             </div>

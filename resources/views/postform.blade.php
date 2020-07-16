@@ -9,11 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <a href="/post" class="btn btn-primary ">Add New Data</a>
+        
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
+                <th scope="col">USER_ID</th>
                 <th scope="col">Title</th>
                 <th scope="col">Image</th>
                 <th scope="col">Content</th>
@@ -24,6 +25,7 @@
               @foreach ($posts as $post)   
                 <tr>
                 <th>{{$post->id}}</th>
+                <th>{{$post->user_id}}</th>
                 <th>{{$post->title}}</th>
                 <th><img src="{{asset('uploads/highlights/'.$post->image)}}" width="100px" height="100px" alt="Image"</th>
                 <th>{{$post->content}}</th> 
@@ -31,9 +33,11 @@
                 <th><a href="/editdata/{{$post->id}}" class="btn btn-success" >EDIT</th>
               </tr>
               @endforeach
-              <a href="/" class="btn btn-default"  style="float: right">Go Back</a>
+              
             </tbody>
+
           </table>
+          <a href="/" class="btn btn-primary"  style="float: right">Go Back</a>
 
     </div>
     

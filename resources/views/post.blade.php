@@ -14,6 +14,10 @@
             {{ csrf_field() }}
 
                 <div class="form-group">
+                    <label>User_ID</label>
+                    <input type="number" name="user_id" class="form-control" placeholder="Enter your ID number">
+                </div>
+                <div class="form-group">
                     <label>Title</label>
                     <input type="text" name="title" class="form-control" placeholder="Enter your title">
                 </div>
@@ -29,7 +33,8 @@
                     <input type="mediumtext" name="content" class="form-control" placeholder="About">
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Save info</button>
-                <a href="/" class="btn btn-default" style="float:right">Go Back</a>
+                <a href="/postview" class = "btn btn-primary" style="margin-left: 35%">View Table</a>
+                <a href="/" class="btn btn-primary" style="float:right">Go Back</a>
             
             </form>
         </div>

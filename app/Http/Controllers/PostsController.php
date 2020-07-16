@@ -35,6 +35,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $post = new Post();
+        $post->user_id = $request->input('user_id');
         $post->title = $request->input('title');
        // $post->image = $request->input('image');
         
@@ -97,6 +98,9 @@ class PostsController extends Controller
     public function update(Request $request, $id)
     {
         $posts = Post::find($id);
+
+        
+        $post->user_id = $request->input('user_id');
         
         $posts->title = $request->input('title');
 
