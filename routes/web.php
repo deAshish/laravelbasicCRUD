@@ -22,4 +22,6 @@ Route::get('/postview','PostsController@Show'); //view table
 Route::get('/postpage','PostsController@Show1');
 Route::get('/editdata/{id}','PostsController@edit');
 Route::put("/updatepost/{id}", 'PostsController@update');
+Route::get('/deletedata','PostsController@show2');
+Route::get("/deletedata/{id}",'PostsController@destroy');
 

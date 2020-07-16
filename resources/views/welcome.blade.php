@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>LaravelCURDDemo</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,13 +81,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome To Demo Project
+                    Welcome To Demo CRUD on Laravel
                 </div>
 
                 <div class="links">
                     <a href="/post">Create Table</a>
                     <a href="/postview">View Table</a>
                     <a href="/postpage">Edit Table</a>
+                    <a href="/deletedata">Delete Data</a>
+                    
                 </div>
             </div>
         </div>

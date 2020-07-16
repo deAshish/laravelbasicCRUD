@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
@@ -124,8 +125,16 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function show2()
     {
-        //
+        $posts = Post::all();
+        return view('postdelete')->with('posts',$posts);
+    }
+
+     public function destroy($id)
+    {
+        //DB:delete('delete from posts where id = ?',[$id]);
+        DB::table('posts')->where('id', '=', [$id])->delete();
+        return redirect('/deletedata')->with('success','Data Deleted');
     }
 }
